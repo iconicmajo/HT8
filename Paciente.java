@@ -9,7 +9,7 @@
  * @author Majo!
  *
  */
-public class Paciente<E extends Comparable<E>> {
+public class Paciente implements Comparable<Paciente> {
 	
 	private String name;
 	private String sick;
@@ -60,12 +60,22 @@ public class Paciente<E extends Comparable<E>> {
 	public void setCode(String code) {
 		this.code = code;
 	}
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
 		return "Paciente [name=" + name + ", sick=" + sick + ", code=" + code + "]";
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Comparable#compareTo(java.lang.Object)
+	 */
+	@Override
+	public int compareTo(Paciente arg0) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 }
